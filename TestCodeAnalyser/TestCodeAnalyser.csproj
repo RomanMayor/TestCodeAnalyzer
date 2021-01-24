@@ -47,9 +47,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="stylecop.json" />
-    <None Include="TestCodeAnalyser.ruleset" />
+    <Content Include="packages.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <CodeAnalysisDictionary Include="stylecop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </CodeAnalysisDictionary>
+    <CodeAnalysisDictionary Include="TestCodeAnalyser.ruleset">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </CodeAnalysisDictionary>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
