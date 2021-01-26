@@ -11,3 +11,11 @@ steps:
     command: 'pack'
     packagesToPack: 'TestCodeAnalyser.csproj'
     versioningScheme: byPrereleaseNumber
+- task: NuGetCommand@2
+  displayName: Nuget Push
+  inputs:
+    command: push    
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: internal
+    versioningScheme: off
+    allowPackageConflicts: true
