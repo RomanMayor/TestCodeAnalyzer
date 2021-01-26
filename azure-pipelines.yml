@@ -11,6 +11,7 @@ pool:
 
 steps:
 - task: NuGetCommand@2
+  displayName: Restore
   inputs:
     command: 'restore'
     restoreSolution: '**/*'
