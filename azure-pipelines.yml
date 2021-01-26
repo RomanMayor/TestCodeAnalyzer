@@ -9,7 +9,7 @@ steps:
   displayName: Nuget Pack
   inputs:
     command: 'pack'
-    packagesToPack: 'TestCodeAnalyser.csproj'
+    packagesToPack: 'TestCodeAnalyserXXX.csproj'
     versioningScheme: byPrereleaseNumber
 - task: NuGetCommand@2
   displayName: Nuget Push
